@@ -5,6 +5,7 @@
  */
 package gesthotel;
 
+import gesthotel.ventanas.FichaReservas;
 import gesthotel.ventanas.Reservas;
 
 
@@ -73,9 +74,19 @@ public class GestHotel extends javax.swing.JFrame {
         jMenuReservas.add(jMenuItemResListado);
 
         jMenuItemResNueva.setText("Nueva Reserva");
+        jMenuItemResNueva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                abrirFichaReservas(evt);
+            }
+        });
         jMenuReservas.add(jMenuItemResNueva);
 
         jMenuItemResModificar.setText("Modificar Reserva");
+        jMenuItemResModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modificarReserva(evt);
+            }
+        });
         jMenuReservas.add(jMenuItemResModificar);
 
         jMenuBar1.add(jMenuReservas);
@@ -143,6 +154,18 @@ public class GestHotel extends javax.swing.JFrame {
         reservas.show();
         
     }//GEN-LAST:event_abrirListado
+
+    private void abrirFichaReservas(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abrirFichaReservas
+        FichaReservas fichaReservas = new FichaReservas();
+        escritorio.add(fichaReservas);
+        fichaReservas.show();
+    }//GEN-LAST:event_abrirFichaReservas
+
+    private void modificarReserva(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarReserva
+       FichaReservas fichaReservas = new FichaReservas();
+       escritorio.add(fichaReservas);
+       fichaReservas.show();
+    }//GEN-LAST:event_modificarReserva
 
     /**
      * @param args the command line arguments
