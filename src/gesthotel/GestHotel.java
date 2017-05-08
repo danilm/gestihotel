@@ -54,6 +54,8 @@ public class GestHotel extends javax.swing.JFrame {
         jMenuItem6.setText("jMenuItem6");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Gestión de Hoteles");
+        setLocation(new java.awt.Point(600, 200));
 
         escritorio.setAutoscrolls(true);
         escritorio.setName("Gestión de Hotel"); // NOI18N
