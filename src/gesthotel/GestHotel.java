@@ -5,8 +5,10 @@
  */
 package gesthotel;
 
+import gesthotel.ventanas.FichaModificarReservas;
 import gesthotel.ventanas.FichaReservas;
 import gesthotel.ventanas.Reservas;
+import gesthotel.ventanas.clientes.ListadoClientes;
 
 
 
@@ -120,6 +122,11 @@ public class GestHotel extends javax.swing.JFrame {
         jMenuClientes.setText("Clientes");
 
         jMenuItemCliListado.setText("Listado");
+        jMenuItemCliListado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCliListadoActionPerformed(evt);
+            }
+        });
         jMenuClientes.add(jMenuItemCliListado);
 
         jMenuItemCliNuevo.setText("Nuevo");
@@ -162,10 +169,16 @@ public class GestHotel extends javax.swing.JFrame {
     }//GEN-LAST:event_abrirFichaReservas
 
     private void modificarReserva(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarReserva
-       FichaReservas fichaReservas = new FichaReservas();
-       escritorio.add(fichaReservas);
-       fichaReservas.show();
+       FichaModificarReservas fichaModificarReservas = new FichaModificarReservas();
+       escritorio.add(fichaModificarReservas);
+       fichaModificarReservas.show();
     }//GEN-LAST:event_modificarReserva
+
+    private void jMenuItemCliListadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCliListadoActionPerformed
+       ListadoClientes listadoClientes = new ListadoClientes();
+       escritorio.add(listadoClientes);
+       listadoClientes.show();
+    }//GEN-LAST:event_jMenuItemCliListadoActionPerformed
 
     /**
      * @param args the command line arguments

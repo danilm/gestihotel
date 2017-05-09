@@ -11,12 +11,12 @@ import javax.swing.JOptionPane;
  *
  * @author daniellopezmesa
  */
-public class FichaReservas extends javax.swing.JInternalFrame {
+public class FichaModificarReservas extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form FichaReservas
      */
-    public FichaReservas() {
+    public FichaModificarReservas() {
         initComponents();
     }
 
@@ -108,9 +108,11 @@ public class FichaReservas extends javax.swing.JInternalFrame {
                 .addContainerGap())
         );
 
-        setTitle("Nueva Reserva");
+        setTitle("Modificar Reserva");
 
         jLabel1.setText("Cliente");
+
+        jTextField1.setText("Daniel López");
 
         jLabel2.setText("Entrada");
 
@@ -123,10 +125,12 @@ public class FichaReservas extends javax.swing.JInternalFrame {
         });
 
         jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yyyy"))));
+        jFormattedTextField1.setText("05/05/2017");
 
         jLabel3.setText("Salida");
 
         jFormattedTextField2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yyyy"))));
+        jFormattedTextField2.setText("10/05/2017");
 
         jButton2.setText("+");
         jButton2.setToolTipText("Nuevo");
@@ -134,6 +138,7 @@ public class FichaReservas extends javax.swing.JInternalFrame {
         jLabel4.setText("Num Pax");
 
         jFormattedTextField3.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
+        jFormattedTextField3.setText("2");
 
         jLabel5.setText("Régimen");
 
@@ -174,8 +179,8 @@ public class FichaReservas extends javax.swing.JInternalFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(125, 125, 125))
+                                .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(116, 116, 116))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -234,7 +239,7 @@ public class FichaReservas extends javax.swing.JInternalFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
        //jDialog1.setVisible(true);
-        jOptionPane1.showMessageDialog(null,"Reserva realizada!");
+        jOptionPane1.showMessageDialog(null,"Reserva modificada!");
        
     }//GEN-LAST:event_jButton4ActionPerformed
 
