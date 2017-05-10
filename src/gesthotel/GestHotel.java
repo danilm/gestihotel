@@ -8,6 +8,8 @@ package gesthotel;
 import gesthotel.ventanas.FichaModificarReservas;
 import gesthotel.ventanas.FichaReservas;
 import gesthotel.ventanas.Reservas;
+import gesthotel.ventanas.clientes.FichaClientes;
+import gesthotel.ventanas.clientes.FichaModificarClientes;
 import gesthotel.ventanas.clientes.ListadoClientes;
 
 
@@ -61,9 +63,10 @@ public class GestHotel extends javax.swing.JFrame {
         setLocation(new java.awt.Point(600, 200));
 
         escritorio.setAutoscrolls(true);
+        escritorio.setMinimumSize(new java.awt.Dimension(900, 600));
         escritorio.setName("Gestión de Hotel"); // NOI18N
-        escritorio.setPreferredSize(new java.awt.Dimension(800, 800));
-        escritorio.setSize(new java.awt.Dimension(800, 800));
+        escritorio.setPreferredSize(new java.awt.Dimension(900, 600));
+        escritorio.setSize(new java.awt.Dimension(900, 600));
 
         jMenuReservas.setText("Reservas");
 
@@ -130,9 +133,19 @@ public class GestHotel extends javax.swing.JFrame {
         jMenuClientes.add(jMenuItemCliListado);
 
         jMenuItemCliNuevo.setText("Nuevo");
+        jMenuItemCliNuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCliNuevoActionPerformed(evt);
+            }
+        });
         jMenuClientes.add(jMenuItemCliNuevo);
 
         jMenuItemCliModificar.setText("Modificar");
+        jMenuItemCliModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCliModificarActionPerformed(evt);
+            }
+        });
         jMenuClientes.add(jMenuItemCliModificar);
 
         jMenuBar1.add(jMenuClientes);
@@ -149,7 +162,7 @@ public class GestHotel extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, 382, Short.MAX_VALUE)
+            .addComponent(escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -179,6 +192,18 @@ public class GestHotel extends javax.swing.JFrame {
        escritorio.add(listadoClientes);
        listadoClientes.show();
     }//GEN-LAST:event_jMenuItemCliListadoActionPerformed
+
+    private void jMenuItemCliNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCliNuevoActionPerformed
+        FichaClientes fichaClientes = new FichaClientes();
+        escritorio.add(fichaClientes);
+        fichaClientes.show();
+    }//GEN-LAST:event_jMenuItemCliNuevoActionPerformed
+
+    private void jMenuItemCliModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCliModificarActionPerformed
+        FichaModificarClientes fichaModClientes = new FichaModificarClientes();
+        escritorio.add(fichaModClientes);
+        fichaModClientes.show();
+    }//GEN-LAST:event_jMenuItemCliModificarActionPerformed
 
     /**
      * @param args the command line arguments
