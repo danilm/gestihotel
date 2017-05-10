@@ -11,6 +11,9 @@ import gesthotel.ventanas.Reservas;
 import gesthotel.ventanas.clientes.FichaClientes;
 import gesthotel.ventanas.clientes.FichaModificarClientes;
 import gesthotel.ventanas.clientes.ListadoClientes;
+import gesthotel.ventanas.empleados.FichaEmpleados;
+import gesthotel.ventanas.empleados.ListadoEmpleados;
+import gesthotel.ventanas.proveedores.ListadoProveedores;
 
 
 
@@ -99,9 +102,19 @@ public class GestHotel extends javax.swing.JFrame {
         jMenuEmpleados.setText("Empleados");
 
         jMenuItemEmpListado.setText("Listado");
+        jMenuItemEmpListado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemEmpListadoActionPerformed(evt);
+            }
+        });
         jMenuEmpleados.add(jMenuItemEmpListado);
 
         jMenuItemEmpNuevo.setText("Nuevo");
+        jMenuItemEmpNuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemEmpNuevoActionPerformed(evt);
+            }
+        });
         jMenuEmpleados.add(jMenuItemEmpNuevo);
 
         jMenuItemEmpModificar.setText("Modificar");
@@ -112,6 +125,11 @@ public class GestHotel extends javax.swing.JFrame {
         jMenuProveedores.setText("Proveedores");
 
         jMenuItemProvListado.setText("Listado");
+        jMenuItemProvListado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemProvListadoActionPerformed(evt);
+            }
+        });
         jMenuProveedores.add(jMenuItemProvListado);
 
         jMenuItemProvNuevo.setText("Nuevo");
@@ -204,6 +222,24 @@ public class GestHotel extends javax.swing.JFrame {
         escritorio.add(fichaModClientes);
         fichaModClientes.show();
     }//GEN-LAST:event_jMenuItemCliModificarActionPerformed
+
+    private void jMenuItemEmpListadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEmpListadoActionPerformed
+        ListadoEmpleados listadoEmpleados = new ListadoEmpleados();
+        escritorio.add(listadoEmpleados);
+        listadoEmpleados.show();
+    }//GEN-LAST:event_jMenuItemEmpListadoActionPerformed
+
+    private void jMenuItemEmpNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEmpNuevoActionPerformed
+        FichaEmpleados fichaEmpleados = new FichaEmpleados();
+        escritorio.add(fichaEmpleados);
+        fichaEmpleados.show();
+    }//GEN-LAST:event_jMenuItemEmpNuevoActionPerformed
+
+    private void jMenuItemProvListadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemProvListadoActionPerformed
+        ListadoProveedores listadoProveedores = new ListadoProveedores();
+        escritorio.add(listadoProveedores);
+        listadoProveedores.show();
+    }//GEN-LAST:event_jMenuItemProvListadoActionPerformed
 
     /**
      * @param args the command line arguments
