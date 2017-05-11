@@ -8,6 +8,7 @@ package gesthotel.ventanas.proveedores;
 import gesthotel.ventanas.empleados.*;
 import gesthotel.ventanas.clientes.*;
 import gesthotel.GestHotel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -41,7 +42,10 @@ public class ListadoProveedores extends javax.swing.JInternalFrame {
         jFormattedTextField1 = new javax.swing.JFormattedTextField();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jComboBox1 = new javax.swing.JComboBox();
         buttonGroup1 = new javax.swing.ButtonGroup();
+        jOptionPane1 = new javax.swing.JOptionPane();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
@@ -51,7 +55,7 @@ public class ListadoProveedores extends javax.swing.JInternalFrame {
         BuscarButton = new javax.swing.JButton();
         MostrarSeleccionadoButton = new javax.swing.JButton();
 
-        BuscarDialog.setTitle("Búsqueda Clientes");
+        BuscarDialog.setTitle("Búsqueda Proveedores");
         BuscarDialog.setAlwaysOnTop(true);
         BuscarDialog.setLocation(new java.awt.Point(600, 230));
         BuscarDialog.setMinimumSize(new java.awt.Dimension(400, 260));
@@ -71,11 +75,11 @@ public class ListadoProveedores extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel2.setText("Introduzca nombre y/o apellidos:");
+        jLabel2.setText("Introduzca Empresa:");
 
         jLabel3.setText("Seleccione el tipo de búsqueda a realizar:");
 
-        jLabel4.setText("Introduzca teléfono:");
+        jLabel4.setText("Introduzca Contacto:");
 
         try {
             jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#########")));
@@ -84,10 +88,15 @@ public class ListadoProveedores extends javax.swing.JInternalFrame {
         }
 
         buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("Por nombre y apellidos");
+        jRadioButton1.setText("Por Empresa");
 
         buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("Por teléfono");
+        jRadioButton2.setText("Por Contacto");
+
+        buttonGroup1.add(jRadioButton3);
+        jRadioButton3.setText("Por Sector");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Seleccione Sector", "Alimentación y Bebidas", "Electricidad", "Maquinaria", "Droguería", " " }));
 
         javax.swing.GroupLayout BuscarDialogLayout = new javax.swing.GroupLayout(BuscarDialog.getContentPane());
         BuscarDialog.getContentPane().setLayout(BuscarDialogLayout);
@@ -101,10 +110,8 @@ public class ListadoProveedores extends javax.swing.JInternalFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BuscarDialogLayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(CancelarButton))
-                            .addComponent(jTextField2)
                             .addGroup(BuscarDialogLayout.createSequentialGroup()
                                 .addGroup(BuscarDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
                                     .addComponent(jLabel4)
                                     .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE)))
@@ -112,17 +119,32 @@ public class ListadoProveedores extends javax.swing.JInternalFrame {
                     .addGroup(BuscarDialogLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addGroup(BuscarDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton1)
+                            .addGroup(BuscarDialogLayout.createSequentialGroup()
+                                .addComponent(jRadioButton1)
+                                .addGap(53, 53, 53)
+                                .addComponent(jRadioButton3))
                             .addComponent(jRadioButton2))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(143, Short.MAX_VALUE))))
             .addGroup(BuscarDialogLayout.createSequentialGroup()
                 .addGap(46, 46, 46)
                 .addComponent(jLabel3)
-                .addGap(0, 95, Short.MAX_VALUE))
+                .addGap(0, 107, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BuscarDialogLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(AceptarButton)
                 .addGap(109, 109, 109))
+            .addGroup(BuscarDialogLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(BuscarDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField2)
+                    .addGroup(BuscarDialogLayout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(BuscarDialogLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         BuscarDialogLayout.setVerticalGroup(
             BuscarDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -130,47 +152,53 @@ public class ListadoProveedores extends javax.swing.JInternalFrame {
                 .addGap(13, 13, 13)
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton1)
+                .addGroup(BuscarDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton1)
+                    .addComponent(jRadioButton3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(BuscarDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BuscarDialogLayout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(AceptarButton))
-                    .addComponent(CancelarButton, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BuscarDialogLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(CancelarButton)))
                 .addContainerGap())
         );
 
-        setTitle("Listado Clientes");
+        setTitle("Listado Proveedores");
 
-        jLabel1.setText("Cliente:");
+        jLabel1.setText("Empresa:");
 
         jTable1.setAutoCreateRowSorter(true);
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Daniel", "López", "01/02/2015", "7897987777"},
-                {"Jaime", "Pérez", "02/03/2016", "97987987"},
-                {"Andrea", "Gutiérrez", "10/04/2017", "7879421115"},
+                {"Carnicas Andres", "Alimentación", "Ricardo García", "7897987777"},
+                {"ElectroLuz", "Electricidad", "Andrés Reina", "97987987"},
+                {"Pryca", "Alimentación y Bebidas", "Sonia Ruiz", "7879421115"},
                 {null, null, null, null}
             },
             new String [] {
-                "Nombre", "Apellidos", "Alta", "Telf"
+                "Empresa", "Sector", "Contacto", "Telf"
             }
         ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
             };
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
             }
         });
         jTable1.setToolTipText("Doble Click para mostrar ficha completa");
@@ -255,10 +283,7 @@ public class ListadoProveedores extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_CancelarButtonActionPerformed
 
     private void AceptarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AceptarButtonActionPerformed
-        //Abre el registro de cliente dummy
-        FichaModificarClientes fichaClientes = new FichaModificarClientes();
-        fichaClientes.setVisible(true);
-        BuscarDialog.setVisible(false);
+         jOptionPane1.showMessageDialog(null,"Proveedor no encontrado!", "Búsqueda Proveedores", JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_AceptarButtonActionPerformed
 
     private void BuscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarButtonActionPerformed
@@ -281,13 +306,16 @@ public class ListadoProveedores extends javax.swing.JInternalFrame {
     private javax.swing.JButton CerrarButton;
     private javax.swing.JButton MostrarSeleccionadoButton;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JOptionPane jOptionPane1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTable jTable1;

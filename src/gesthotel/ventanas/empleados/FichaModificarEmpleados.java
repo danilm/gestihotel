@@ -11,12 +11,12 @@ import gesthotel.ventanas.clientes.*;
  *
  * @author daniellopezmesa
  */
-public class FichaEmpleados extends javax.swing.JInternalFrame {
+public class FichaModificarEmpleados extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form FichaClientes
      */
-    public FichaEmpleados() {
+    public FichaModificarEmpleados() {
         initComponents();
     }
 
@@ -91,29 +91,41 @@ public class FichaEmpleados extends javax.swing.JInternalFrame {
 
         jLabel9.setText("Teléfono:");
 
+        jTextField1.setText("Antonio");
+
+        jTextField2.setText("García");
+
+        jTextField3.setText("789562356J");
+
         jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("d/MM/yyyy"))));
+        jFormattedTextField1.setText("12/05/1987");
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
+        jTextArea1.setText("Los álamos, 7");
         jScrollPane1.setViewportView(jTextArea1);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Fuengirola", "Marbella", "Mijas", "La línea", " " }));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Almeria", "Cádiz", "Córdoba", "Huelva", "Granada", "Jaén", "Málaga", "Madrid", "Murcia", "Sevilla" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Málaga", "Almeria", "Cádiz", "Córdoba", "Huelva", "Granada", "Jaén", "Madrid", "Murcia", "Sevilla" }));
 
         try {
             jFormattedTextField3.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#########")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        jFormattedTextField3.setText("789468788");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Gerente", "Recepción", "Botones", "Limpiadora", "Cocinero", "Ayudante Cocina", "Mantenimiento", "Camarera Piso" }));
+        jTextField4.setText("anto@gmail.com");
+
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mantenimiento", "Gerente", "Recepción", "Botones", "Limpiadora", "Cocinero", "Ayudante Cocina", "Camarera Piso" }));
 
         jLabel10.setText("Puesto");
 
         jLabel11.setText("Salario");
 
-        jFormattedTextField2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("€#,##0.00;(€#,##0.00)"))));
+        jFormattedTextField2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat(""))));
+        jFormattedTextField2.setText("€1,600.00");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -230,7 +242,7 @@ public class FichaEmpleados extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        jOptionPane1.showMessageDialog(null,"Alta de empleado realizada!");
+        jOptionPane1.showMessageDialog(null,"Empleado modificado!");
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

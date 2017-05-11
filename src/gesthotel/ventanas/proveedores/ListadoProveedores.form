@@ -4,7 +4,7 @@
   <NonVisualComponents>
     <Container class="javax.swing.JDialog" name="BuscarDialog">
       <Properties>
-        <Property name="title" type="java.lang.String" value="B&#xfa;squeda Clientes"/>
+        <Property name="title" type="java.lang.String" value="B&#xfa;squeda Proveedores"/>
         <Property name="alwaysOnTop" type="boolean" value="true"/>
         <Property name="location" type="java.awt.Point" editor="org.netbeans.beaninfo.editors.PointEditor">
           <Point value="[600, 230]"/>
@@ -27,10 +27,8 @@
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   <Component id="CancelarButton" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jTextField2" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jFormattedTextField1" alignment="0" min="-2" pref="245" max="-2" attributes="0"/>
                                   </Group>
@@ -42,22 +40,42 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                                  <Component id="jRadioButton3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="143" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="95" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="107" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="AceptarButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jTextField2" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jComboBox1" min="-2" pref="165" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -67,23 +85,31 @@
                   <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jRadioButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jTextField2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jFormattedTextField1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Component id="AceptarButton" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="CancelarButton" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="CancelarButton" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -109,7 +135,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Introduzca nombre y/o apellidos:"/>
+            <Property name="text" type="java.lang.String" value="Introduzca Empresa:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
@@ -119,7 +145,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Introduzca tel&#xe9;fono:"/>
+            <Property name="text" type="java.lang.String" value="Introduzca Contacto:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField2">
@@ -136,7 +162,7 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Por nombre y apellidos"/>
+            <Property name="text" type="java.lang.String" value="Por Empresa"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButton2">
@@ -144,16 +170,40 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Por tel&#xe9;fono"/>
+            <Property name="text" type="java.lang.String" value="Por Contacto"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="jRadioButton3">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Por Sector"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboBox1">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="6">
+                <StringItem index="0" value="Seleccione Sector"/>
+                <StringItem index="1" value="Alimentaci&#xf3;n y Bebidas"/>
+                <StringItem index="2" value="Electricidad"/>
+                <StringItem index="3" value="Maquinaria"/>
+                <StringItem index="4" value="Droguer&#xed;a"/>
+                <StringItem index="5" value=" "/>
+              </StringArray>
+            </Property>
           </Properties>
         </Component>
       </SubComponents>
     </Container>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
     </Component>
+    <Component class="javax.swing.JOptionPane" name="jOptionPane1">
+    </Component>
   </NonVisualComponents>
   <Properties>
-    <Property name="title" type="java.lang.String" value="Listado Clientes"/>
+    <Property name="title" type="java.lang.String" value="Listado Proveedores"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -227,7 +277,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Cliente:"/>
+        <Property name="text" type="java.lang.String" value="Empresa:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField1">
@@ -246,25 +296,25 @@
             <Property name="autoCreateRowSorter" type="boolean" value="true"/>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="4" rowCount="4">
-                <Column editable="false" title="Nombre" type="java.lang.Object">
-                  <Data value="Daniel"/>
-                  <Data value="Jaime"/>
-                  <Data value="Andrea"/>
+                <Column editable="true" title="Empresa" type="java.lang.String">
+                  <Data value="Carnicas Andres"/>
+                  <Data value="ElectroLuz"/>
+                  <Data value="Pryca"/>
                   <Data value="null"/>
                 </Column>
-                <Column editable="false" title="Apellidos" type="java.lang.Object">
-                  <Data value="L&#xf3;pez"/>
-                  <Data value="P&#xe9;rez"/>
-                  <Data value="Guti&#xe9;rrez"/>
+                <Column editable="true" title="Sector" type="java.lang.String">
+                  <Data value="Alimentaci&#xf3;n"/>
+                  <Data value="Electricidad"/>
+                  <Data value="Alimentaci&#xf3;n y Bebidas"/>
                   <Data value="null"/>
                 </Column>
-                <Column editable="false" title="Alta" type="java.lang.Object">
-                  <Data value="01/02/2015"/>
-                  <Data value="02/03/2016"/>
-                  <Data value="10/04/2017"/>
+                <Column editable="true" title="Contacto" type="java.lang.String">
+                  <Data value="Ricardo Garc&#xed;a"/>
+                  <Data value="Andr&#xe9;s Reina"/>
+                  <Data value="Sonia Ruiz"/>
                   <Data value="null"/>
                 </Column>
-                <Column editable="false" title="Telf" type="java.lang.Object">
+                <Column editable="true" title="Telf" type="java.lang.Object">
                   <Data value="7897987777"/>
                   <Data value="97987987"/>
                   <Data value="7879421115"/>

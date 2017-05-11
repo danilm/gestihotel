@@ -6,6 +6,7 @@
 package gesthotel.ventanas.clientes;
 
 import gesthotel.GestHotel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -40,6 +41,7 @@ public class ListadoClientes extends javax.swing.JInternalFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         buttonGroup1 = new javax.swing.ButtonGroup();
+        jOptionPane1 = new javax.swing.JOptionPane();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
@@ -144,7 +146,7 @@ public class ListadoClientes extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(AceptarButton))
                     .addComponent(CancelarButton, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap())
+                .addGap(10, 10, 10))
         );
 
         setTitle("Listado Clientes");
@@ -253,10 +255,7 @@ public class ListadoClientes extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_CancelarButtonActionPerformed
 
     private void AceptarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AceptarButtonActionPerformed
-        //Abre el registro de cliente dummy
-        FichaModificarClientes fichaClientes = new FichaModificarClientes();
-        fichaClientes.setVisible(true);
-        BuscarDialog.setVisible(false);
+         jOptionPane1.showMessageDialog(null,"Cliente no encontrado!", "Búsqueda Clientes", JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_AceptarButtonActionPerformed
 
     private void BuscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarButtonActionPerformed
@@ -284,6 +283,7 @@ public class ListadoClientes extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JOptionPane jOptionPane1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;

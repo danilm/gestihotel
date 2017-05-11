@@ -12,7 +12,10 @@ import gesthotel.ventanas.clientes.FichaClientes;
 import gesthotel.ventanas.clientes.FichaModificarClientes;
 import gesthotel.ventanas.clientes.ListadoClientes;
 import gesthotel.ventanas.empleados.FichaEmpleados;
+import gesthotel.ventanas.empleados.FichaModificarEmpleados;
 import gesthotel.ventanas.empleados.ListadoEmpleados;
+import gesthotel.ventanas.proveedores.FichaModificarProveedores;
+import gesthotel.ventanas.proveedores.FichaProveedores;
 import gesthotel.ventanas.proveedores.ListadoProveedores;
 
 
@@ -118,6 +121,11 @@ public class GestHotel extends javax.swing.JFrame {
         jMenuEmpleados.add(jMenuItemEmpNuevo);
 
         jMenuItemEmpModificar.setText("Modificar");
+        jMenuItemEmpModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemEmpModificarActionPerformed(evt);
+            }
+        });
         jMenuEmpleados.add(jMenuItemEmpModificar);
 
         jMenuBar1.add(jMenuEmpleados);
@@ -133,9 +141,19 @@ public class GestHotel extends javax.swing.JFrame {
         jMenuProveedores.add(jMenuItemProvListado);
 
         jMenuItemProvNuevo.setText("Nuevo");
+        jMenuItemProvNuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemProvNuevoActionPerformed(evt);
+            }
+        });
         jMenuProveedores.add(jMenuItemProvNuevo);
 
         jMenuItemProvModificar.setText("Modificar");
+        jMenuItemProvModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemProvModificarActionPerformed(evt);
+            }
+        });
         jMenuProveedores.add(jMenuItemProvModificar);
 
         jMenuBar1.add(jMenuProveedores);
@@ -240,6 +258,24 @@ public class GestHotel extends javax.swing.JFrame {
         escritorio.add(listadoProveedores);
         listadoProveedores.show();
     }//GEN-LAST:event_jMenuItemProvListadoActionPerformed
+
+    private void jMenuItemEmpModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEmpModificarActionPerformed
+        FichaModificarEmpleados fichaModEmpleados = new FichaModificarEmpleados();
+        escritorio.add(fichaModEmpleados);
+        fichaModEmpleados.show();
+    }//GEN-LAST:event_jMenuItemEmpModificarActionPerformed
+
+    private void jMenuItemProvNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemProvNuevoActionPerformed
+        FichaProveedores fichaProveedores = new FichaProveedores();
+        escritorio.add(fichaProveedores);
+        fichaProveedores.show();
+    }//GEN-LAST:event_jMenuItemProvNuevoActionPerformed
+
+    private void jMenuItemProvModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemProvModificarActionPerformed
+        FichaModificarProveedores fichaModificarProveedores = new FichaModificarProveedores();
+        escritorio.add(fichaModificarProveedores);
+        fichaModificarProveedores.show();
+    }//GEN-LAST:event_jMenuItemProvModificarActionPerformed
 
     /**
      * @param args the command line arguments
